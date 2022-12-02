@@ -16,6 +16,7 @@ public class JMeterController {
 
     @PostMapping("/saveBulkData")
     public void saveBulkData(@RequestBody List<JMeterEntity> jMeterEntities) {
+        jMeterEntities.forEach(System.out::println);
         jMeterService.saveBulkData(jMeterEntities);
     }
 
